@@ -3,73 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khalifa Aldhaheri - CV</title>
+    <title>Khalifa Aldhaheri | AI Enthusiast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { margin:0; padding:0; background:#f8fafc; color:#1e293b; font-family:'Inter',sans-serif; line-height:1.6; }
-        .container { max-width:960px; margin:50px auto; background:white; border-radius:20px; overflow:hidden; box-shadow:0 25px 50px rgba(0,123,255,0.15); border:1px solid #e0e7ff; }
-        header { background:linear-gradient(135deg,#007bff,#409fff); padding:80px 40px; text-align:center; color:white; }
-        h1 { margin:0; font-size:3.8rem; font-weight:700; letter-spacing:-1px; }
-        .contact { margin:20px 0; font-size:1.2rem; }
-        .contact a { color:white; text-decoration:none; }
-        h2 { color:#007bff; border-bottom:3px solid #409fff; padding-bottom:10px; margin:40px 0 25px; font-size:1.6rem; }
-        .section { padding:0 60px 50px; }
-        .about { font-size:1.15rem; color:#475569; margin-bottom:30px; }
-        .bubbles { display:flex; flex-wrap:wrap; gap:16px; margin:25px 0; }
-        .bubble { background:#e0f2fe; color:#0369a1; padding:14px 24px; border-radius:50px; font-weight:600; box-shadow:0 4px 15px rgba(0,123,255,0.15); border:2px solid #99f; transition:transform .2s; }
-        .bubble:hover { transform:translateY(-5px); }
-        .skills { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0; }
-        .skill { background:#007bff; color:white; padding:10px 20px; border-radius:50px; font-size:0.95rem; }
-        footer { text-align:center; padding:35px; background:#0d6efd; color:white; font-size:0.95rem; }
+        :root {
+            --primary: #6366f1;
+            --accent: #a78bfa;
+            --dark: #1e1b4b;
+            --light: #f8f9ff;
+            --gray: #64748b;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #ddd6fe);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .cv {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(99,102,241,0.2);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 70px 30px 50px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .tagline { font-size: 1.4rem; opacity: 0.95; margin: 10px 0; }
+        .contact {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .contact a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 500;
+        }
+        main { padding: 50px 40px; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            header { padding: 60px 20px 40px; }
+            main { padding: 40px 25px; }
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 40px 0 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        .about { font-size: 1.1rem; line-height: 1.8; color: var(--gray); }
+        .bubbles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 25px 0;
+        }
+        .bubble {
+            background: linear-gradient(135deg, #c4b5fd, #e0e7ff);
+            color: var(--dark);
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 6px 20px rgba(99,102,241,0.2);
+            transition: all 0.3s ease;
+        }
+        .bubble:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(99,102,241,0.3); }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .skill {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        .section-text { margin: 15px 0; font-size: 1.05rem; color: var(--gray); }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="cv">
         <header>
             <h1>Khalifa Aldhaheri</h1>
-            <p style="font-size:1.5rem; opacity:0.95; margin:10px 0;">AI Enthusiast & Future Innovator</p>
+            <p class="tagline">AI Enthusiast & Physics-AI Innovator</p>
             <div class="contact">
                 <a href="tel:+971543399351">+971 54 339 9351</a> • 
                 <a href="mailto:khalifaaldhaheri206@gmail.com">khalifaaldhaheri206@gmail.com</a>
             </div>
         </header>
 
-        <div class="section">
+        <main>
             <h2>About Me</h2>
             <p class="about">
-                Passionate AI enthusiast focused on training and implementing artificial intelligence in diverse applications, 
-                especially physics simulations (molecular dynamics, fluid dynamics, astrophysics modeling) and real-world systems. 
-                Love exploring neural networks for scientific discovery and building practical AI solutions.
+                Passionate high-school AI enthusiast deeply focused on training and deploying neural networks 
+                for real-world and scientific applications — especially physics simulations (molecular dynamics, 
+                fluid dynamics, astrophysics, quantum systems). Building the next generation of physics-informed AI.
             </p>
 
             <h2>Education</h2>
-            <p><strong>High School – Advanced Track</strong><br>GPA: <strong style="color:#007bff;">91%</strong></p>
+            <p class="section-text">
+                <strong>High School – Advanced Track</strong><br>
+                GPA: <strong style="color:var(--primary)">91%</strong>
+            </p>
 
             <h2>Certifications & Achievements</h2>
             <div class="bubbles">
                 <div class="bubble">EDGE Group Certificate</div>
-                <div class="bubble">4-Week Data Internship – Nexus Insurance Brokers</div>
-                <div class="bubble">Advanced High School GPA 91%</div>
-                <div class="bubble">AI & Physics Simulation Enthusiast</div>
-                <div class="bubble">Proficient in Training Neural Networks</div>
+                <div class="bubble">Data Internship – Nexus Insurance Brokers</div>
+                <div class="bubble">High School GPA 91%</div>
+                <div class="bubble">Physics-Informed Neural Networks</div>
+                <div class="bubble">Scientific Computing Expert</div>
+                <div class="bubble">AI × Physics Innovator</div>
             </div>
 
             <h2>Technical Skills</h2>
             <div class="skills">
                 <span class="skill">Python</span>
-                <span class="skill">Julia Language</span>
-                <span class="skill">Data Management</span>
+                <span class="skill">Julia</span>
                 <span class="skill">Machine Learning</span>
-                <span class="skill">Physics-Informed AI</span>
+                <span class="skill">Data Management</span>
+                <span class="skill">Neural Networks</span>
                 <span class="skill">Scientific Computing</span>
             </div>
 
             <h2>Experience</h2>
-            <p><strong>Data Management Intern</strong> – Nexus Insurance Brokers<br>4 weeks • Managed and structured large-scale insurance datasets</p>
-        </div>
+            <p class="section-text">
+                <strong>Data Management Intern</strong> – Nexus Insurance Brokers<br>
+                4 weeks • Designed and managed large-scale insurance datasets
+            </p>
+        </main>
 
         <footer>
-            Khalifa Aldhaheri © 2025 • Ready to build the future with AI
+            Khalifa Aldhaheri © 2025 — Ready to shape the future of AI
         </footer>
     </div>
 </body>
