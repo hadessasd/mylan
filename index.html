@@ -36,21 +36,21 @@
             text-align: center;
             animation: fadeIn 1s ease-out;
         }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+        @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+        h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 10px; }
         .tagline { font-size: 1.5rem; opacity: 0.95; margin: 12px 0; }
+        .location { font-size: 1.1rem; opacity: 0.9; }
         .contact {
             margin-top: 25px;
             font-size: 1.15rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         .contact a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: 500;
             transition: opacity 0.3s;
         }
@@ -69,51 +69,47 @@
             padding-bottom: 12px;
         }
         h2::after {
-            content: '';
-            left: 0;
-            bottom: 0;
-            width: 70px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-            position: absolute;
-            animation: slideIn 1s ease-out;
+            content: ''; position: absolute; left: 0; bottom: 0;
+            width: 70px; height: 4px; background: var(--accent); border-radius: 2px;
         }
-        @keyframes slideIn { from { width: 0; } to { width: 70px; } }
-        .about { font-size: 1.15rem; line-height: 1.8; color: var(--gray); animation: fadeIn 1.2s ease-out; }
+        .about { font-size: 1.15rem; line-height: 1.8; color: var(--gray); }
         .achievements {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
             margin: 30px 0;
         }
         .achievement {
             background: var(--light);
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 8px 25px rgba(79,70,229,0.15);
+            border-radius: 14px;
+            padding: 16px;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 500;
+            box-shadow: 0 6px 20px rgba(79,70,229,0.12);
             transition: all 0.3s ease;
-            animation: popIn 1.5s ease-out;
         }
-        @keyframes popIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-        .achievement:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(79,70,229,0.25); }
-        .achievement strong { color: var(--primary); font-size: 1.1rem; display: block; margin-bottom: 8px; }
+        .achievement:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(79,70,229,0.22);
+        }
+        .achievement strong { color: var(--primary); display: block; margin-bottom: 4px; }
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 12px;
             margin: 25px 0;
         }
         .skill {
             background: var(--primary);
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 50px;
             font-weight: 500;
-            transition: transform 0.3s;
+            font-size: 0.95rem;
         }
         .skill:hover { transform: scale(1.05); }
-        .section-text { margin: 20px 0; font-size: 1.1rem; color: var(--gray); animation: fadeIn 1.3s ease-out; }
+        .section-text { margin: 20px 0; font-size: 1.1rem; color: var(--gray); }
         footer {
             background: var(--dark);
             color: white;
@@ -128,19 +124,20 @@
         <header>
             <h1>Khalifa Aldhaheri</h1>
             <p class="tagline">AI Enthusiast & Physics-AI Pioneer</p>
-            <p>UAE Resident • Abu Dhabi</p>
+            <p class="location">UAE Resident • Abu Dhabi</p>
             <div class="contact">
-                <a href="tel:+971543399351">+971 54 339 9351</a> • 
+                <a href="tel:+971543399351">+971 54 339 9351</a>
                 <a href="mailto:khalifaaldhaheri206@gmail.com">khalifaaldhaheri206@gmail.com</a>
+                <a href="https://huggingface.co/kazuhasasd/models" target="_blank">Hugging Face</a>
             </div>
         </header>
 
         <main>
             <h2>About Me</h2>
             <p class="about">
-                Passionate AI enthusiast from Abu Dhabi, UAE. Focused on training and implementing neural networks 
-                for diverse applications, including physics simulations (molecular dynamics, fluid dynamics, 
-                astrophysics, quantum systems). Building innovative physics-informed AI solutions.
+                Passionate AI enthusiast from Abu Dhabi, UAE. Actively training and deploying models 
+                (check my Hugging Face). Specialised in physics-informed neural networks, scientific 
+                simulations, and real-world AI applications.
             </p>
 
             <h2>Education</h2>
@@ -151,26 +148,11 @@
 
             <h2>Achievements & Certifications</h2>
             <div class="achievements">
-                <div class="achievement">
-                    <strong>EDGE Group Certificate</strong>
-                    Recognized expertise in advanced tech.
-                </div>
-                <div class="achievement">
-                    <strong>Data Internship – Nexus Insurance</strong>
-                    4 weeks managing large-scale datasets.
-                </div>
-                <div class="achievement">
-                    <strong>High School GPA 91%</strong>
-                    Advanced track excellence.
-                </div>
-                <div class="achievement">
-                    <strong>Physics-Informed AI</strong>
-                    Enthusiast in simulations & modeling.
-                </div>
-                <div class="achievement">
-                    <strong>Neural Network Training</strong>
-                    Proficient in AI implementation.
-                </div>
+                <div class="achievement"><strong>EDGE Group Certificate</strong></div>
+                <div class="achievement"><strong>Data Internship</strong>Nexus Insurance Brokers</div>
+                <div class="achievement"><strong>GPA 91%</strong>Advanced Track</div>
+                <div class="achievement"><strong>Physics-Informed AI</strong>Specialist</div>
+                <div class="achievement"><strong>Hugging Face</strong>Active Model Publisher</div>
             </div>
 
             <h2>Technical Skills</h2>
@@ -186,12 +168,12 @@
             <h2>Experience</h2>
             <p class="section-text">
                 <strong>Data Management Intern</strong> – Nexus Insurance Brokers<br>
-                4 weeks • Structured and optimized insurance datasets
+                4 weeks • Optimized large-scale insurance datasets
             </p>
         </main>
 
         <footer>
-            Khalifa Aldhaheri © 2025 — Innovating AI for Tomorrow
+            Khalifa Aldhaheri © 2025 — Building the Future of AI
         </footer>
     </div>
 </body>
