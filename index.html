@@ -6,54 +6,70 @@
     <title>Khalifa Aldhaheri - CV</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { margin:0; padding:0; background:#0f172a; color:#e2e8f0; font-family:'Inter',sans-serif; line-height:1.6; }
-        .container { max-width:900px; margin:40px auto; background:#1e293b; border-radius:16px; overflow:hidden; box-shadow:0 20px 40px rgba(0,0,0,0.4); }
-        header { background:linear-gradient(135deg,#6366f1,#8b5cf6); padding:60px 40px; text-align:center; color:white; }
-        h1 { margin:0; font-size:3.5rem; font-weight:700; }
-        h2 { color:#a78bfa; border-bottom:2px solid #4c1d95; padding-bottom:8px; margin:30px 0 20px; }
-        .section { padding:0 50px 40px; }
-        ul { padding-left:20px; }
-        li { margin:12px 0; }
-        .highlight { color:#c4b5fd; font-weight:600; }
+        body { margin:0; padding:0; background:#f8fafc; color:#1e293b; font-family:'Inter',sans-serif; line-height:1.6; }
+        .container { max-width:960px; margin:50px auto; background:white; border-radius:20px; overflow:hidden; box-shadow:0 25px 50px rgba(0,123,255,0.15); border:1px solid #e0e7ff; }
+        header { background:linear-gradient(135deg,#007bff,#409fff); padding:80px 40px; text-align:center; color:white; }
+        h1 { margin:0; font-size:3.8rem; font-weight:700; letter-spacing:-1px; }
+        .contact { margin:20px 0; font-size:1.2rem; }
+        .contact a { color:white; text-decoration:none; }
+        h2 { color:#007bff; border-bottom:3px solid #409fff; padding-bottom:10px; margin:40px 0 25px; font-size:1.6rem; }
+        .section { padding:0 60px 50px; }
+        .about { font-size:1.15rem; color:#475569; margin-bottom:30px; }
+        .bubbles { display:flex; flex-wrap:wrap; gap:16px; margin:25px 0; }
+        .bubble { background:#e0f2fe; color:#0369a1; padding:14px 24px; border-radius:50px; font-weight:600; box-shadow:0 4px 15px rgba(0,123,255,0.15); border:2px solid #99f; transition:transform .2s; }
+        .bubble:hover { transform:translateY(-5px); }
         .skills { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0; }
-        .skill { background:#4c1d95; padding:8px 16px; border-radius:50px; font-size:0.9rem; }
-        footer { text-align:center; padding:30px; background:#111827; font-size:0.9rem; }
+        .skill { background:#007bff; color:white; padding:10px 20px; border-radius:50px; font-size:0.95rem; }
+        footer { text-align:center; padding:35px; background:#0d6efd; color:white; font-size:0.95rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Khalifa Aldhaheri</h1>
-            <p style="font-size:1.3rem; opacity:0.9;">AI Enthusiast & Data Specialist</p>
+            <p style="font-size:1.5rem; opacity:0.95; margin:10px 0;">AI Enthusiast & Future Innovator</p>
+            <div class="contact">
+                <a href="tel:+971543399351">+971 54 339 9351</a> • 
+                <a href="mailto:khalifaaldhaheri206@gmail.com">khalifaaldhaheri206@gmail.com</a>
+            </div>
         </header>
 
         <div class="section">
-            <h2>About</h2>
-            <p>Born October 23, 2006<br>Passionate about Artificial Intelligence and data-driven solutions.</p>
+            <h2>About Me</h2>
+            <p class="about">
+                Passionate AI enthusiast focused on training and implementing artificial intelligence in diverse applications, 
+                especially physics simulations (molecular dynamics, fluid dynamics, astrophysics modeling) and real-world systems. 
+                Love exploring neural networks for scientific discovery and building practical AI solutions.
+            </p>
 
             <h2>Education</h2>
-            <p><strong>High School – Advanced Classes</strong><br>GPA: <span class="highlight">91%</span></p>
+            <p><strong>High School – Advanced Track</strong><br>GPA: <strong style="color:#007bff;">91%</strong></p>
 
-            <h2>Experience</h2>
-            <p><strong>Data Management Internship</strong> – Nexus Insurance Brokers<br>4-week program (2024–2025)<br>Managed and organized large datasets for insurance operations.</p>
+            <h2>Certifications & Achievements</h2>
+            <div class="bubbles">
+                <div class="bubble">EDGE Group Certificate</div>
+                <div class="bubble">4-Week Data Internship – Nexus Insurance Brokers</div>
+                <div class="bubble">Advanced High School GPA 91%</div>
+                <div class="bubble">AI & Physics Simulation Enthusiast</div>
+                <div class="bubble">Proficient in Training Neural Networks</div>
+            </div>
 
-            <h2>Certifications</h2>
-            <ul>
-                <li>Certificate from EDGE Group</li>
-            </ul>
-
-            <h2>Skills</h2>
+            <h2>Technical Skills</h2>
             <div class="skills">
-                <span class="skill">Data Management</span>
                 <span class="skill">Python</span>
                 <span class="skill">Julia Language</span>
-                <span class="skill">AI Interest</span>
-                <span class="skill">Analytical Thinking</span>
+                <span class="skill">Data Management</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Physics-Informed AI</span>
+                <span class="skill">Scientific Computing</span>
             </div>
+
+            <h2>Experience</h2>
+            <p><strong>Data Management Intern</strong> – Nexus Insurance Brokers<br>4 weeks • Managed and structured large-scale insurance datasets</p>
         </div>
 
         <footer>
-            Khalifa Aldhaheri © 2025
+            Khalifa Aldhaheri © 2025 • Ready to build the future with AI
         </footer>
     </div>
 </body>
