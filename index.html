@@ -12,8 +12,6 @@
     --dark: #1e293b;
     --light: #f1f5f9;
     --gray: #6b7280;
-    --badge-bg: linear-gradient(135deg,#6366f1,#818cf8);
-    --badge-text: white;
 }
 /* Scroll Progress Bar */
 #progress-container {
@@ -194,18 +192,19 @@ footer {
     flex: 0 0 auto;
     width: 180px;
     height: 120px;
-    background: var(--badge-bg);
     border-radius: 16px;
-    color: var(--badge-text);
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
+}
+.badge-card img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
 }
 .badge-card:hover {
     transform: translateY(-6px);
@@ -279,17 +278,32 @@ Passionate about physics-informed neural networks (PINNs), scientific computing,
     <p>Issued during my Nexus Insurance internship program.</p>
 </div>
 
-<h2>Google AI Skills & Certificates</h2>
+<h2>Google AI Skills & Competitions</h2>
 <div class="google-section">
     <div class="google-badges">
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" target="_blank" class="badge-card">AI Skill</a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" target="_blank" class="badge-card">AI Skill</a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" target="_blank" class="badge-card">AI Skill</a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" target="_blank" class="badge-card">AI Skill</a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9062264" target="_blank" class="badge-card">Generative AI</a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9066225" target="_blank" class="badge-card">Prompt Eng.</a>
+        <!-- Competitions highlighted first -->
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9062264" target="_blank" class="badge-card">
+            <img src="https://cdn.qwiklabs.com/cJST69RAGEWHqVpVRVLM0jrw4ckkPZt4asE6DMIMkqI%3D" alt="Generative AI Comp">
+        </a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9066225" target="_blank" class="badge-card">
+            <img src="https://cdn.qwiklabs.com/CmKnJgGc%2FJXb%2FDCvu%2BzgvGfxxEQQ4kfQV5P9o3wUK0c%3D" alt="Prompt Engineering Comp">
+        </a>
+        <!-- AI Skills -->
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" target="_blank" class="badge-card">
+            <img src="https://cdn.qwiklabs.com/jpRPgA0zsA4IAeGiNnyLMTetPX15Tj77yUcUD4Ro5YM%3D" alt="AI Skill 1">
+        </a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" target="_blank" class="badge-card">
+            <img src="https://cdn.qwiklabs.com/vtEM4QeUkkcddAboA1EWYsjoF0vzkyigxksUFisMQU8%3D" alt="AI Skill 2">
+        </a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" target="_blank" class="badge-card">
+            <img src="https://cdn.qwiklabs.com/ftMS%2BJ4juq%2Bo0yUlwi1kb112wF0KJxntYYsIGLbLodY%3D" alt="AI Skill 3">
+        </a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" target="_blank" class="badge-card">
+            <img src="https://cdn.qwiklabs.com/fjdlMJrxQS7Z6zYqLcUUlaEaVijarKcq9ee9V9wo%2FRE%3D" alt="AI Skill 4">
+        </a>
     </div>
 </div>
+
 </main>
 
 <footer>
