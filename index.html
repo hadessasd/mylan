@@ -137,25 +137,27 @@
             padding: 40px;
             font-size: 1rem;
         }
-        
-        /* Added styling for your internship image */
-        .internship-img {
-            width: 240px;
-            max-width: 90%;
-            margin: 20px auto 10px;
-            display: block;
+
+        /* Styling for internship image section */
+        .internship-section img {
+            width: 320px;
+            max-width: 95%;
             border-radius: 12px;
+            display: block;
+            margin: 20px auto;
             box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+        .internship-section p {
+            text-align: center;
+            color: var(--gray);
+            margin-top: 10px;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
     <div class="cv">
         <header>
-
-            <!-- ⭐ ADDED IMAGE HERE -->
-            <img src="CamScanner 06-12-2025 10.45.jpg" alt="Internship Certificate" class="internship-img">
-
             <h1>Khalifa Aldhaheri</h1>
             <p class="tagline">AI Pioneer & Physics-Informed ML Developer</p>
             <p class="location">UAE Resident • Abu Dhabi</p>
@@ -171,8 +173,9 @@
         <main>
             <h2>About Me</h2>
             <p class="about">
-                 AI developer from Abu Dhabi building real-world AI agents and medical diagnosis models. 
-                Passionate about physics informed neural networks (PINNs), scientific computing, and autonomous systems.
+                AI developer from Abu Dhabi building real-world AI agents and medical diagnosis models.
+                Passionate about physics-informed neural networks (PINNs), scientific computing, and autonomous systems.<br><br>
+                <strong>Born: October 23, 2006</strong>
             </p>
 
             <h2>Featured Projects</h2>
@@ -184,7 +187,7 @@
                 </div>
                 <div class="project">
                     <h3>Eye Disease Classifier (CNN + GNN Hybrid)</h3>
-                    <p>Advanced hybrid model detecting 10+ eye diseases from fundus images using CNN feature extraction + GNN pattern recognition for high-accuracy differential diagnosis.</p>
+                    <p>Advanced hybrid model detecting 10+ eye diseases from fundus images using CNN feature extraction + GNN pattern recognition.</p>
                     <a href="https://huggingface.co/kazuhasasd/EyeDisease-Classifier" target="_blank">→ View Model & Code</a>
                 </div>
             </div>
@@ -210,6 +213,14 @@
 
             <h2>Experience</h2>
             <p><strong>Data Management Intern</strong> – Nexus Insurance Brokers<br>4 weeks • Optimized large-scale datasets</p>
+
+            <!-- ⭐ NEW INTERNSHIP CERTIFICATE SECTION -->
+            <h2>Internship Certificate</h2>
+            <div class="internship-section">
+                <img src="CamScanner 06-12-2025 10.45.jpg" alt="Internship Certificate">
+                <p>Issued during my Nexus Insurance internship program.</p>
+            </div>
+
         </main>
 
         <footer>
