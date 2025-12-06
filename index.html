@@ -1,273 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khalifa Aldhaheri | AI Pioneer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #4f46e5;
-            --accent: #818cf8;
-            --dark: #1e293b;
-            --light: #f1f5f9;
-            --gray: #6b7280;
-        }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-            color: var(--dark);
-            min-height: 100vh;
-            padding: 30px 0;
-        }
-        .cv {
-            max-width: 1150px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 28px;
-            overflow: hidden;
-            box-shadow: 0 25px 70px rgba(79,70,229,0.25);
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            padding: 80px 40px 60px;
-            text-align: center;
-        }
-        h1 { font-size: 3.6rem; font-weight: 700; margin-bottom: 10px; }
-        .tagline { font-size: 1.5rem; opacity: 0.95; margin: 12px 0; }
-        .location { font-size: 1.15rem; opacity: 0.9; }
-        .contact {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .btn {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
-        }
-        .btn:hover { background: rgba(255,255,255,0.3); transform: translateY(-3px); }
-        .btn img { height: 20px; filter: brightness(0) invert(1); }
-        main { padding: 60px 50px; }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.8rem; }
-            header { padding: 70px 20px 50px; }
-            main { padding: 50px 25px; }
-        }
-        h2 {
-            font-size: 1.9rem;
-            color: var(--primary);
-            margin: 50px 0 25px;
-            padding-bottom: 12px;
-            position: relative;
-        }
-        h2::after {
-            content: ''; position: absolute; left: 0; bottom: 0;
-            width: 70px; height: 5px; background: var(--accent); border-radius: 3px;
-        }
-        .about { font-size: 1.15rem; line-height: 1.8; color: var(--gray); margin-bottom: 30px; }
-        .achievements {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin: 30px 0;
-        }
-        .achievement {
-            background: var(--light);
-            border-radius: 12px;
-            padding: 12px 18px;
-            font-size: 0.94rem;
-            font-weight: 500;
-            box-shadow: 0 6px 18px rgba(79,70,229,0.12);
-            transition: all 0.3s;
-        }
-        .achievement:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(79,70,229,0.2); }
-        .achievement strong { color: var(--primary); }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        .project {
-            background: linear-gradient(135deg, #f8fafc, #e0e7ff);
-            border-radius: 18px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(79,70,229,0.15);
-            transition: transform 0.3s;
-        }
-        .project:hover { transform: translateY(-8px); }
-        .project h3 { color: var(--primary); margin-bottom: 10px; }
-        .project a { color: var(--primary); font-weight: 600; }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 25px 0;
-        }
-        .skill {
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .skill img { height: 18px; }
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 40px;
-            font-size: 1rem;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalifa Aldhaheri | AI Pioneer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --primary: #4f46e5;
+        --accent: #818cf8;
+        --dark: #1e293b;
+        --light: #f1f5f9;
+        --gray: #6b7280;
+        --badge-bg: #eef2ff;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+        color: var(--dark);
+        min-height: 100vh;
+        padding: 30px 0;
+    }
+    .cv {
+        max-width: 1150px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 25px 70px rgba(79,70,229,0.25);
+    }
+    header {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: white;
+        padding: 80px 40px 60px;
+        text-align: center;
+    }
+    h1 { font-size: 3.6rem; font-weight: 700; margin-bottom: 10px; }
+    .tagline { font-size: 1.5rem; opacity: 0.95; margin: 12px 0; }
+    .location { font-size: 1.15rem; opacity: 0.9; }
+    .contact {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .btn {
+        background: rgba(255,255,255,0.2);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s;
+        backdrop-filter: blur(10px);
+    }
+    .btn:hover { background: rgba(255,255,255,0.3); transform: translateY(-3px); }
+    .btn img { height: 20px; filter: brightness(0) invert(1); }
+    main { padding: 60px 50px; }
+    @media (max-width: 768px) {
+        h1 { font-size: 2.8rem; }
+        header { padding: 70px 20px 50px; }
+        main { padding: 50px 25px; }
+    }
+    h2 {
+        font-size: 1.9rem;
+        color: var(--primary);
+        margin: 50px 0 25px;
+        padding-bottom: 12px;
+        position: relative;
+    }
+    h2::after {
+        content: ''; position: absolute; left: 0; bottom: 0;
+        width: 70px; height: 5px; background: var(--accent); border-radius: 3px;
+    }
+    .about { font-size: 1.15rem; line-height: 1.8; color: var(--gray); margin-bottom: 30px; }
+    .achievements {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 30px 0;
+    }
+    .achievement {
+        background: var(--light);
+        border-radius: 12px;
+        padding: 12px 18px;
+        font-size: 0.94rem;
+        font-weight: 500;
+        box-shadow: 0 6px 18px rgba(79,70,229,0.12);
+        transition: all 0.3s;
+    }
+    .achievement:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(79,70,229,0.2); }
+    .achievement strong { color: var(--primary); }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 25px;
+        margin: 40px 0;
+    }
+    .project {
+        background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(79,70,229,0.15);
+        transition: transform 0.3s;
+    }
+    .project:hover { transform: translateY(-8px); }
+    .project h3 { color: var(--primary); margin-bottom: 10px; }
+    .project a { color: var(--primary); font-weight: 600; }
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 25px 0;
+    }
+    .skill {
+        background: var(--primary);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .skill img { height: 18px; }
+    footer {
+        background: var(--dark);
+        color: white;
+        text-align: center;
+        padding: 40px;
+        font-size: 1rem;
+    }
 
-        /* Internship Image Styling */
-        .internship-section img {
-            width: 320px;
-            max-width: 95%;
-            border-radius: 12px;
-            display: block;
-            margin: 20px auto;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        }
-        .internship-section p {
-            text-align: center;
-            color: var(--gray);
-            margin-top: 10px;
-            font-size: 1rem;
-        }
+    /* Internship Image Styling */
+    .internship-section img {
+        width: 320px;
+        max-width: 95%;
+        border-radius: 12px;
+        display: block;
+        margin: 20px auto;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+    .internship-section p {
+        text-align: center;
+        color: var(--gray);
+        margin-top: 10px;
+        font-size: 1rem;
+    }
 
-        /* Google Badges Styling */
-        .google-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 18px;
-            margin: 30px 0;
-        }
-        .google-badges img {
-            width: 140px;
-            max-width: 90%;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(79,70,229,0.2);
-            transition: transform 0.3s;
-        }
-        .google-badges img:hover {
-            transform: translateY(-5px);
-        }
-    </style>
+    /* Google Badge Cards Styling */
+    .google-section {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 40px;
+    }
+    .google-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .badge-card {
+        background: var(--badge-bg);
+        border-radius: 16px;
+        padding: 12px;
+        width: 160px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .badge-card img {
+        width: 100%;
+        border-radius: 12px;
+    }
+    .badge-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    }
+    .badge-title {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: var(--dark);
+        font-weight: 500;
+    }
+</style>
 </head>
 <body>
-    <div class="cv">
-        <header>
-            <h1>Khalifa Aldhaheri</h1>
-            <p class="tagline">AI Pioneer & Physics-Informed ML Developer</p>
-            <p class="location">UAE Resident • Abu Dhabi</p>
-            <div class="contact">
-                <a href="tel:+971543399351" class="btn">+971 54 339 9351</a>
-                <a href="mailto:khalifaaldhaheri206@gmail.com" class="btn">Email</a>
-                <a href="https://huggingface.co/kazuhasasd" target="_blank" class="btn">
-                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HF"> Hugging Face
+<div class="cv">
+    <header>
+        <h1>Khalifa Aldhaheri</h1>
+        <p class="tagline">AI Pioneer & Physics-Informed ML Developer</p>
+        <p class="location">UAE Resident • Abu Dhabi</p>
+        <div class="contact">
+            <a href="tel:+971543399351" class="btn">+971 54 339 9351</a>
+            <a href="mailto:khalifaaldhaheri206@gmail.com" class="btn">Email</a>
+            <a href="https://huggingface.co/kazuhasasd" target="_blank" class="btn">
+                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HF"> Hugging Face
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h2>About Me</h2>
+        <p class="about">
+            AI developer from Abu Dhabi building real-world AI agents and medical diagnosis models.
+            Passionate about physics-informed neural networks (PINNs), scientific computing, and autonomous systems.<br><br>
+            <strong>Born: October 23, 2006</strong>
+        </p>
+
+        <h2>Featured Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Real Estate AI Agent (OWL)</h3>
+                <p>Fine-tuned autonomous agent that scrapes UAE property listings, identifies owners, and contacts them to list properties on major platforms.</p>
+                <a href="https://huggingface.co/kazuhasasd/owl" target="_blank">→ View on Hugging Face</a>
+            </div>
+            <div class="project">
+                <h3>Eye Disease Classifier (CNN + GNN Hybrid)</h3>
+                <p>Advanced hybrid model detecting 10+ eye diseases from fundus images using CNN feature extraction + GNN pattern recognition.</p>
+                <a href="https://huggingface.co/kazuhasasd/EyeDisease-Classifier" target="_blank">→ View Model & Code</a>
+            </div>
+        </div>
+
+        <h2>Achievements</h2>
+        <div class="achievements">
+            <div class="achievement"><strong>EDGE Group</strong> Certificate</div>
+            <div class="achievement"><strong>Nexus Insurance</strong> Data Intern</div>
+            <div class="achievement"><strong>GPA 91%</strong> Advanced Track</div>
+            <div class="achievement"><strong>Active HF Publisher</strong></div>
+            <div class="achievement"><strong>Physics-Informed AI</strong></div>
+        </div>
+
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
+            <span class="skill"><img src="https://julialang.org/assets/infra/logo.svg" alt="Julia" style="filter:brightness(0)invert(1);"> Julia</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">GNNs & CNNs</span>
+            <span class="skill">Data Management</span>
+            <span class="skill">Scientific Computing</span>
+        </div>
+
+        <h2>Experience</h2>
+        <p><strong>Data Management Intern</strong> – Nexus Insurance Brokers<br>4 weeks • Optimized large-scale datasets</p>
+
+        <h2>Internship Certificate</h2>
+        <div class="internship-section">
+            <img src="CamScanner 06-12-2025 10.45.jpg" alt="Internship Certificate">
+            <p>Issued during my Nexus Insurance internship program.</p>
+        </div>
+
+        <!-- Google AI Skills & Certification Section -->
+        <h2>Google AI Skills & Certificates</h2>
+        <div class="google-section">
+            <div class="google-group">
+                <!-- AI Skill Badges -->
+                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" target="_blank" class="badge-card">
+                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" alt="Google AI Skill 1">
+                    <div class="badge-title">Google AI Skill 1</div>
+                </a>
+                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" target="_blank" class="badge-card">
+                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" alt="Google AI Skill 2">
+                    <div class="badge-title">Google AI Skill 2</div>
+                </a>
+                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" target="_blank" class="badge-card">
+                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" alt="Google AI Skill 3">
+                    <div class="badge-title">Google AI Skill 3</div>
+                </a>
+                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" target="_blank" class="badge-card">
+                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" alt="Google AI Skill 4">
+                    <div class="badge-title">Google AI Skill 4</div>
                 </a>
             </div>
-        </header>
 
-        <main>
-            <h2>About Me</h2>
-            <p class="about">
-                AI developer from Abu Dhabi building real-world AI agents and medical diagnosis models.
-                Passionate about physics-informed neural networks (PINNs), scientific computing, and autonomous systems.<br><br>
-                <strong>Born: October 23, 2006</strong>
-            </p>
-
-            <h2>Featured Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>Real Estate AI Agent (OWL)</h3>
-                    <p>Fine-tuned autonomous agent that scrapes UAE property listings, identifies owners, and contacts them to list properties on major platforms.</p>
-                    <a href="https://huggingface.co/kazuhasasd/owl" target="_blank">→ View on Hugging Face</a>
-                </div>
-                <div class="project">
-                    <h3>Eye Disease Classifier (CNN + GNN Hybrid)</h3>
-                    <p>Advanced hybrid model detecting 10+ eye diseases from fundus images using CNN feature extraction + GNN pattern recognition.</p>
-                    <a href="https://huggingface.co/kazuhasasd/EyeDisease-Classifier" target="_blank">→ View Model & Code</a>
-                </div>
-            </div>
-
-            <h2>Achievements</h2>
-            <div class="achievements">
-                <div class="achievement"><strong>EDGE Group</strong> Certificate</div>
-                <div class="achievement"><strong>Nexus Insurance</strong> Data Intern</div>
-                <div class="achievement"><strong>GPA 91%</strong> Advanced Track</div>
-                <div class="achievement"><strong>Active HF Publisher</strong></div>
-                <div class="achievement"><strong>Physics-Informed AI</strong></div>
-            </div>
-
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
-                <span class="skill"><img src="https://julialang.org/assets/infra/logo.svg" alt="Julia" style="filter:brightness(0)invert(1);"> Julia</span>
-                <span class="skill">Machine Learning</span>
-                <span class="skill">GNNs & CNNs</span>
-                <span class="skill">Data Management</span>
-                <span class="skill">Scientific Computing</span>
-            </div>
-
-            <h2>Experience</h2>
-            <p><strong>Data Management Intern</strong> – Nexus Insurance Brokers<br>4 weeks • Optimized large-scale datasets</p>
-
-            <!-- Internship Certificate Section -->
-            <h2>Internship Certificate</h2>
-            <div class="internship-section">
-                <img src="CamScanner 06-12-2025 10.45.jpg" alt="Internship Certificate">
-                <p>Issued during my Nexus Insurance internship program.</p>
-            </div>
-
-            <!-- Google AI Skills & Certificates -->
-            <h2>Google AI Skills & Certificates</h2>
-            <div class="google-badges">
-                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" target="_blank">
-                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" alt="Google AI Skill Badge 1">
-                </a>
-                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" target="_blank">
-                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" alt="Google AI Skill Badge 2">
-                </a>
-                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" target="_blank">
-                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" alt="Google AI Skill Badge 3">
-                </a>
-                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" target="_blank">
-                    <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" alt="Google AI Skill Badge 4">
-                </a>
-                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9062264" target="_blank">
+            <div class="google-group">
+                <!-- Generative & Prompt Engineering -->
+                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9062264" target="_blank" class="badge-card">
                     <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9062264" alt="Generative AI Certificate">
+                    <div class="badge-title">Generative AI Certificate</div>
                 </a>
-                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9066225" target="_blank">
+                <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9066225" target="_blank" class="badge-card">
                     <img src="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9066225" alt="Prompt Engineering Certificate">
+                    <div class="badge-title">Prompt Engineering Certificate</div>
                 </a>
             </div>
+        </div>
+    </main>
 
-        </main>
-
-        <footer>
-            Khalifa Aldhaheri © 2025 — Building Tomorrow's AI Today
-        </footer>
-    </div>
+    <footer>
+        Khalifa Aldhaheri © 2025 — Building Tomorrow's AI Today
+    </footer>
+</div>
 </body>
 </html>
