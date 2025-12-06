@@ -15,13 +15,29 @@
     --badge-bg: linear-gradient(135deg,#6366f1,#818cf8);
     --badge-text: white;
 }
+/* Scroll Progress Bar */
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    transition: width 0.2s;
+}
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
     color: var(--dark);
     min-height: 100vh;
-    padding: 30px 0;
+    padding: 0 0 30px 0;
 }
 .cv {
     max-width: 1150px;
@@ -156,30 +172,36 @@ footer {
     font-size: 1rem;
 }
 
-/* Google Badges Replacement Cards */
+/* Google Badges Scroll Styling */
 .google-section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    margin: 40px 0;
 }
-.google-group {
+.google-badges {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+.google-badges::-webkit-scrollbar {
+    height: 10px;
+}
+.google-badges::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
 }
 .badge-card {
-    width: 160px;
-    height: 140px;
+    flex: 0 0 auto;
+    width: 180px;
+    height: 120px;
     background: var(--badge-bg);
     border-radius: 16px;
     color: var(--badge-text);
-    font-weight: 600;
-    font-size: 0.95rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -189,13 +211,10 @@ footer {
     transform: translateY(-6px);
     box-shadow: 0 14px 30px rgba(0,0,0,0.25);
 }
-.badge-icon {
-    font-size: 36px;
-    margin-bottom: 8px;
-}
 </style>
 </head>
 <body>
+<div id="progress-container"><div id="progress-bar"></div></div>
 <div class="cv">
 <header>
     <h1>Khalifa Aldhaheri</h1>
@@ -262,40 +281,30 @@ Passionate about physics-informed neural networks (PINNs), scientific computing,
 
 <h2>Google AI Skills & Certificates</h2>
 <div class="google-section">
-    <div class="google-group">
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" target="_blank" class="badge-card">
-            <div class="badge-icon">🤖</div>
-            Google AI Skill 1
-        </a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" target="_blank" class="badge-card">
-            <div class="badge-icon">🧠</div>
-            Google AI Skill 2
-        </a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" target="_blank" class="badge-card">
-            <div class="badge-icon">📊</div>
-            Google AI Skill 3
-        </a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" target="_blank" class="badge-card">
-            <div class="badge-icon">💻</div>
-            Google AI Skill 4
-        </a>
-    </div>
-    <div class="google-group">
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9062264" target="_blank" class="badge-card">
-            <div class="badge-icon">✨</div>
-            Generative AI Certificate
-        </a>
-        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9066225" target="_blank" class="badge-card">
-            <div class="badge-icon">⚡</div>
-            Prompt Engineering Certificate
-        </a>
+    <div class="google-badges">
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047712" target="_blank" class="badge-card">AI Skill</a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047739" target="_blank" class="badge-card">AI Skill</a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9047756" target="_blank" class="badge-card">AI Skill</a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9060690" target="_blank" class="badge-card">AI Skill</a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9062264" target="_blank" class="badge-card">Generative AI</a>
+        <a href="https://partner.skills.google/public_profiles/6903814f-1121-4682-a590-e23a8afdd600/badges/9066225" target="_blank" class="badge-card">Prompt Eng.</a>
     </div>
 </div>
 </main>
 
 <footer>
-    Khalifa Aldhaheri © 2025 — Building Tomorrow's AI Today
+Khalifa Aldhaheri © 2025 — Building Tomorrow's AI Today
 </footer>
 </div>
+
+<script>
+// Scroll Progress Bar
+window.onscroll = function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progress-bar").style.width = scrolled + "%";
+};
+</script>
 </body>
 </html>
